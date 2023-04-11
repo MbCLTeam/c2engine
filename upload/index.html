@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OpenCubie - Upload de Projetos</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>body{font-family: Arial, sans-serif;} .container{max-width: 600px;} .form-group label{font-weight: bold;} .btn-enviar{background-color: #purple; border-color: #1e7e34;} .btn-enviar:hover{background-color: darkpurple; border-color: #16632c;}</style>
+</head>
+<body><div class="container"><h1 class="my-4 text-center">OpenCubie</h1><form action="mailto:open@cubiecloud.ml" method="post" enctype="text/plain">
+<div class="form-group">
+<label for="autor">Autor:</label>
+<input type="text" class="form-control" id="autor" name="autor" required>
+</div>
+<div class="form-group">
+<label for="nomeProjeto">Nome do Projeto:</label>
+<input type="text" class="form-control" id="nomeProjeto" name="nomeProjeto" required>
+</div>
+<div class="form-group">
+<label for="linkArquivo">Link dos Arquivos:</label>
+<input type="text" class="form-control" id="linkArquivo" name="linkArquivo" required>
+</div>
+<div class="form-group">
+<label for="opcoes">Público ou Privado:</label>
+<select class="form-control" id="opcoes" name="opcoes" required>
+<option value="publico">Público</option>
+<option value="privado">Privado</option>
+</select>
+</div>
+<div class="form-group">
+<label for="versao">Versão:</label>
+<input type="text" class="form-control" id="versao" name="versao" maxlength="10" pattern="[0-9\.]{1,10}" required>
+</div>
+<div class="form-group">
+<label for="descricao">Descrição:</label>
+<textarea class="form-control" id="descricao" name="descricao" rows="5" required></textarea>
+</div>
+<button type="submit" class="btn btn-enviar btn-block"><i class="fa fa-envelope"></i> Enviar</button>
+</form></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
