@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Botão massageador</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script>
+		var interval;
+		function startVibration() {
+			interval = setInterval(function(){
+				window.navigator.vibrate(200);
+			}, 300);
+			document.getElementById("button").innerHTML = "Desligar";
+			document.getElementById("button").classList.add("btn-danger");
+		}
+		function stopVibration() {
+			clearInterval(interval);
+			document.getElementById("button").innerHTML = "Ligar";
+			document.getElementById("button").classList.remove("btn-danger");
+		}
+	</script>
+	<style>
+		.btn-circle {
+			border-radius: 50%;
+			width: 150px;
+			height: 150px;
+			font-size: 2rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+		<button id="button" type="button" class="btn btn-primary btn-circle" onclick="if (this.value=='Ligar'){this.value='Desligar'; startVibration();}else{this.value='Ligar'; stopVibration();}">Ligar</button>
+	</div>
+</body>
+</html>
